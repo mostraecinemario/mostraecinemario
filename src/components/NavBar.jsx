@@ -30,6 +30,7 @@ const NavBar = ({ item }) => {
             {item.children.map(({isDisabled, label, href}) => (
               <MenuItem key={href} isDisabled={isDisabled || false} color="brand.amarelo" fontSize="18px" fontWeight="bold" textTransform="uppercase">
                 {isDisabled && label }
+
                 {!isDisabled && 
                   <Link href={href} >{label}</Link>
                 }
