@@ -1,10 +1,12 @@
-import { Flex, Image, Icon, useDisclosure, Stack } from '@chakra-ui/react';
+import { Flex, Image, Icon, useDisclosure, Stack, Link, Menu} from '@chakra-ui/react';
 import { CgMenuRight } from 'react-icons/cg';
 
 import NavLink from './NavLink';
+import NavBar from './NavBar';
 import SideBar from './SideBar';
 
 import Elem18 from '/public/identidade_visual/elementos identidade visual-18.png'
+//import Logo from '/public/logos/logo.png'
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -20,14 +22,14 @@ const Header = () => {
     filmes: {
       label: "Filmes",
       children: [
-        {label: "curtas latino-americanos", href: '/filmes/mostra-principal'},
-        {label: "cinemas insurgentes", href: '/filmes/mostra-paralela'}
+        {label: "curtas latino-americanos", href: '/filmes/mostra-principal', isDisabled: true},
+        {label: "cinemas insurgentes", href: '/filmes/mostra-paralela', isDisabled: true}
       ]
     },
     atividades: {
       label: "Atividades",
       children: [
-        {label: "Cine Debate", href: '/atividades/cine-debate'},
+        {label: "Cine Debate", href: '/atividades/cine-debate', isDisabled: true},
         {label: "Cine drive-in", href: '/drive-in'}
       ]
     }
@@ -43,7 +45,9 @@ const Header = () => {
       bg="brand.vermelho"
       justify="space-between"
     >
-      <Image maxH="120px" src={Elem18.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
+      <Link href="/">
+        <Image maxH="120px" src={Elem18.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
+      </Link>
 
       <Flex display={{base: 'flex', md:'none'}}>
         <Icon as={CgMenuRight} w="40px" h="40px" color="brand.amarelo" onClick={onOpen} />
@@ -56,7 +60,9 @@ const Header = () => {
             {
               Object.values(LinkItems).map((item) => {
                 return (
-                  <NavLink key={item.label} item={item} color="brand.amarelo" />
+                  <Menu key={item.label}>
+                    <NavBar item={item} />
+                  </Menu>
                 )
               })
             }

@@ -1,6 +1,7 @@
-import { ChakraProvider, extendTheme,Flex } from "@chakra-ui/react"
+import { ChakraProvider, extendTheme, Flex, Box } from "@chakra-ui/react"
 import Header from "../components/Header";
 import SocialBar from '../components/SocialBar';
+import Footer from "../components/Footer";
 import '../styles/globals.css'
 
 const colors = {
@@ -18,11 +19,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme} resetCSS>
       <Header />
+
       <Flex w="calc(100vw - 50px)" p={3}>
         <Component flex={1} {...pageProps} />
       </Flex>
 
       <SocialBar />
+
+      <Footer />
     </ChakraProvider>
   )
 }

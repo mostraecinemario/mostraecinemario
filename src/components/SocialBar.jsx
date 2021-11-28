@@ -3,7 +3,7 @@ import socialMedias from '/src/utils/socialMedias';
 
 const SocialBar = () => {
   return (
-    <Stack position="fixed" right="7px" top="250px">
+    <Stack position="fixed" right="7px" top="250px" zIndex={1}>
       {socialMedias.map(({icon, link}) => (
         <Circle key={link} p="8px" bgColor="brand.vermelho"> 
           <Link 

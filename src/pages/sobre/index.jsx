@@ -12,9 +12,9 @@ const About = () => {
         <Flex justify="center" p={3}>
           <Image src={Elem22.src} alt="Elemento da identidade visual em formato de flor" h="25px" />
         </Flex>
-        <Flex direction="column" align="center">
+        <Flex direction={{base: "column", md:"row"}} align="center">
           <Image maxH="400px" w="fit-content" src={img} alt="Cartaz da mostra de 2018" />
-          <Text className="justify" py={2}>
+          <Text className="justify" py={2} px={{base: 0, md: 4}}>
             {children}
           </Text>
         </Flex>
@@ -23,7 +23,7 @@ const About = () => {
   }
 
   return (
-    <Box>
+    <Box px={{base: 0, md: 12}}>
       <Flex align="center">
         <Image src={Elem22.src} alt="Elemento da identidade visual em formato de flor" h="18px" />
         <Text ms={2} fontWeight="bold" color="brand.azul" fontSize="22px" textTransform="uppercase">
