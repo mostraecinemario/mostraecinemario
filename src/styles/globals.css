@@ -22,3 +22,7 @@ a {
 .chakra-link:focus {
   box-shadow: none !important;
 }
+
+.justify {
+  text-align: justify;
+}

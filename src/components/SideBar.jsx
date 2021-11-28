@@ -10,54 +10,46 @@ import {
   DrawerContent,
   Circle,
   Link,
-  Stack
+  Stack,
+  Button
 } from '@chakra-ui/react';
 import { CgClose } from 'react-icons/cg';
 
 import NavLink from './NavLink';
+import SocialBar from './SocialBar';
 
-import Elem15 from '/public/identidade_visual/elementos identidade visual-15.png'
-
-import socialMedias from '/src/utils/socialMedias';
-
+import Elem18 from '/public/identidade_visual/elementos identidade visual-18.png'
 
 const SideBar = ({onClose, isOpen, LinkItems}) => {
   return (
     <Drawer onClose={onClose} isOpen={isOpen} size="full" isFullHeight>
       <DrawerOverlay />
-      <DrawerContent bgColor="brand.amarelo">
-        <DrawerHeader>
+      <DrawerContent>
+        <DrawerHeader  bgColor="brand.vermelho">
           <Flex justify="space-between" align="center">
-            <Image maxH="120px" src={Elem15.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
-            <Icon as={CgClose} boxSize="40px" color="brand.vermelho" onClick={onClose} />
+            <Link href="/">
+              <Image maxH="120px" src={Elem18.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
+            </Link>
+            <Icon as={CgClose} boxSize="40px" color="brand.amarelo" onClick={onClose} />
           </Flex>
         </DrawerHeader>
-        <DrawerBody px={10}>
-          <Stack spacing="10">
-          {
-            Object.values(LinkItems).map((item) => {
-              return (
-                <NavLink key={item.label} item={item} color="brand.azul" subMenu />
-              )
-            })
-          }
-          </Stack>
-        </DrawerBody>
-        <DrawerFooter bgColor="white" px={3} py={5}>
-          <Flex justify="space-evenly" w="100%"> 
-            {socialMedias.map(({icon, link}) => (
-              <Circle key={link} p="2" bgColor="brand.vermelho"> 
-                <Link 
-                  lineHeight="0"
-                  href={link}
-                  target="_blank" 
-                >
-                  <Icon as={icon} boxSize="25px" color="white" />
-                </Link>
-              </Circle>
-            ))} 
+        <DrawerBody px={3}>
+          <Flex flex={1} justify="space-between">
+            <Stack spacing="10" w="calc(100vw - 50px)" ps={7}>
+              <Flex align="center" justify="center">
+                <Button variant="outline" color="brand.vermelho" borderWidth={3} borderColor="brand.vermelho" fontSize="30px" px="2px" py={0} opacity={.25} width="fit-content">NO AR</Button>
+              </Flex>
+              {
+                Object.values(LinkItems).map((item) => {
+                  return (
+                    <NavLink key={item.label} item={item} color="brand.azul" subMenu />
+                  )
+                })
+              }
+            </Stack>
           </Flex>
-        </DrawerFooter>
+            <SocialBar />
+        </DrawerBody>
       </DrawerContent>
     </Drawer>
   );

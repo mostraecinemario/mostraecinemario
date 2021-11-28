@@ -10,26 +10,25 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   
   const LinkItems = {
-    inicio: { label: "Inicio", href: "/" },
     aMostra: {
       label: "A Mostra",
       children: [
-        {label: "Sobre", href: '/mostra/sobre'},
-        {label: "Ficha Técnica", href: '/mostra/ficha-tecnica'}
+        {label: "Sobre", href: '/sobre'},
+        {label: "Ficha Técnica", href: '/ficha_tecnica'}
       ]
     },
     filmes: {
       label: "Filmes",
       children: [
-        {label: "Mostra Principal", href: '/filmes/mostra-principal'},
-        {label: "Mostra Paralela", href: '/filmes/mostra-paralela'}
+        {label: "curtas latino-americanos", href: '/filmes/mostra-principal'},
+        {label: "cinemas insurgentes", href: '/filmes/mostra-paralela'}
       ]
     },
     atividades: {
       label: "Atividades",
       children: [
         {label: "Cine Debate", href: '/atividades/cine-debate'},
-        {label: "Cinema de Rua", href: '/atividades/cinema-de-rua'}
+        {label: "Cine drive-in", href: '/drive-in'}
       ]
     }
   };
@@ -49,6 +48,7 @@ const Header = () => {
       <Flex display={{base: 'flex', md:'none'}}>
         <Icon as={CgMenuRight} w="40px" h="40px" color="brand.amarelo" onClick={onOpen} />
       </Flex>
+
       <SideBar onClose={onClose} isOpen={isOpen} LinkItems={LinkItems} />
 
       <Flex display={{base: 'none', md:'flex'}}>
