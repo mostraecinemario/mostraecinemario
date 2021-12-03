@@ -1,141 +1,51 @@
-import { Text, Box, Flex, Image, Stack } from "@chakra-ui/react";
+import { Text, Box, Flex, Image, Stack, Link } from "@chakra-ui/react";
 
 import Elem22 from "/public/identidade_visual/elementos identidade visual-22.png";
-import Cartaz from "/public/cartazes/responsabilidade-empresarial-papo-de-cinema-cartaz.jpg";
+import Cartaz from "/public/drivein/responsabilidad_empresarial.png";
+import ButtonImg from "/public/drivein/button.png"
+import Date from "/public/drivein/date.png"
+import Flower from "/public/drivein/flower.png"
+import Title from "/public/drivein/title.png"
 
 const DriveIn = () => {
   return (
-    <Flex direction={{base: "column", md: "row"}}>
-      <Image maxH={{base: '350px', md: '500px'}} w="fit-content" src={Cartaz.src} alt="Cartaz filme exibido no cine drive-in" />
+    <Stack py={5} spacing={5}>
+      <Flex direction={{base:"column", md:"row"}} px={{md: 24}} align="center" justify="center">
+        <Image h="300px" src={Title.src} alt="cine drive-in" />
+        <Box className="justify">
+          <Text>
+            Como abertura da 3ª Mostra de Cinema Latino-Americano de Rio Grande, um Cine Drive-in foi pensado para atender o público da cidade do Rio Grande. Este ano, a atividade irá acontecer no estacionamento do Porto Velho de Rio Grande, com a exibição do filme Responsabilidade Empresarial, do diretor Jonathan Perel. 
+          </Text>
+          <Text>
+            Responsabilidade Empresarial é uma produção argentina, lançada em 2020, com classificação indicativa de 16 anos. O longa-metragem insere o público no contexto da ditadura na Argentina (1976-1983), onde vários cómplices civis contribuíram para a repressão e nunca foram levados à justiça. Em 2015, foi publicado um relatório que comprova a responsabilidade empresarial. Jonathan Perel lê trechos do relatório em frente a muitas fábricas dessas empresas. 
+          </Text>
+          <Text>
+            O Cine Drive-in será gratuito, mas é necessário fazer inscrição para participar, basta clicar no botão logo abaixo que diz “RETIRE SEU TICKET”, preencher o formulário de inscrição, enviar, e, aguardar a confirmação por e-mail. Importante se atentar, o som do filme é disponibilizado através do rádio do carro, que capta uma frequência própria do nosso equipamento.  
+          </Text>
+        </Box> 
+      </Flex>
+      <Flex direction={{base:"column", md:"row"}} align="center">
+        <Stack>
+          <Image maxH="400px" position="relative" right={3} src={Cartaz.src} alt="Cartaz do filme Responsabilidad Empresarial" />
+          <Box position={{ lg: "relative"}} top="-160px" right={4} px={3} py={1} color={{ lg: 'brand.amarelo' }}>
+              <Text fontSize="22px">RESPONSABILIDADE EMPRESARIAL, 2020, AR</Text>
+              <Text fontSize="22px">Dirigido por Jonathan Perel</Text>
+              <Text>
+                Durante a ditadura argentina (1976-1983), vários cúmplices civis contribuíram para a repressão e nunca foram levados à justiça. Em 2015, foi publicado um relatório que comprova a responsabilidade empresarial. Jonathan Perel lê trechos do relatório em frente a muitas fábricas dessas empresas.
+              </Text>
+          </Box>
+        </Stack>
+        <Stack ms={{base: 0, md: 5}} spacing={5}  alignSelf={{base: 'flex-end', md: 'flex-start'}} >
+          <Image maxH="200px" objectFit="contain" src={Date.src} alt="9/12 às 20h30 Estacionamento do Porto Velho de Rio Grande" />
+    
+          <Link href='https://forms.gle/hDcf6sWK1LHuTDEo8' target="_blank">
+            <Image maxH="300px" objectFit="contain" alt="Inscreva-se" src={ButtonImg.src} />
+          </Link>
+        </Stack>
+      </Flex>
 
-      <Box>
-        <Flex mt={4} align="center">
-          <Image  src={Elem22.src} alt="Elemento da identidade visual em formato de flor" h="18px" />
-          <Text
-            ms={2}
-            textTransform="uppercase"
-            fontWeight="bold"
-            color="brand.azul"
-            fontSize="20px"
-          >
-            Responsabilidade empresarial
-          </Text>
-        </Flex>
-        
-        <Flex>
-          <Text
-            ms={2}
-            textTransform="uppercase"
-            fontWeight="bold"
-            color="brand.azul"
-            fontSize="20px"
-          >
-            Ano:
-          </Text>
-          <Text
-            ms={2}
-            fontWeight="500"
-            color="brand.azul"
-            fontSize="20px"
-            as="u"
-          >
-            2020
-          </Text>
-        </Flex>
-        
-        <Flex>
-          <Text
-            ms={2}
-            textTransform="uppercase"
-            fontWeight="bold"
-            color="brand.azul"
-            fontSize="20px"
-          >
-            País:
-          </Text>
-          <Text
-            ms={2}
-            fontWeight="500"
-            color="brand.azul"
-            fontSize="20px"
-            as="u"
-          >
-            Argentina
-          </Text>
-        </Flex>
-        
-        <Flex>
-          <Text
-            ms={2}
-            textTransform="uppercase"
-            fontWeight="bold"
-            color="brand.azul"
-            fontSize="20px"
-          >
-            Direção:
-          </Text>
-          <Text
-            ms={2}
-            fontWeight="500"
-            color="brand.azul"
-            fontSize="20px"
-            as="u"
-          >
-            Jonathan Perel
-          </Text>
-        </Flex>
-        
-        <Flex mb={5} direction="column">
-          <Text
-            ms={2}
-            textTransform="uppercase"
-            fontWeight="bold"
-            color="brand.azul"
-            fontSize="20px"
-          >
-            Sinopse:
-          </Text>
-          <Text
-            ms={2}
-            fontWeight="500"
-            color="brand.azul"
-            fontSize="20px"
-          >
-            Durante a ditadura argentina (1976-1983), vários cúmplices civis contribuíram para a repressão e nunca foram levados à justiça. Em 2015, foi publicado um relatório que comprova a responsabilidade empresarial. Jonathan Perel lê trechos do relatório em frente a muitas fábricas dessas empresas.
-          </Text>
-        </Flex>
-
-        <Text
-          ms={2}
-          fontWeight="500"
-          color="brand.azul"
-          fontSize="20px"
-        >
-          <Text as="span" fontWeight="bold" textTransform="uppercase" me={2}>Data:</Text>
-          09 de dezembro de 2021
-        </Text>
-
-        <Text
-          ms={2}
-          fontWeight="500"
-          color="brand.azul"
-          fontSize="20px"
-        >
-          <Text as="span" fontWeight="bold" textTransform="uppercase" me={2}>Local:</Text>
-          Estacionamento do Porto Velho de Rio Grande, entrada pela rua Riachuelo
-        </Text>
-
-        <Text
-          ms={2}
-          fontWeight="500"
-          color="brand.azul"
-          fontSize="20px"
-        >
-          <Text as="span" fontWeight="bold" textTransform="uppercase" me={2}>Horário:</Text>
-          20h30
-        </Text>
-      </Box>
-    </Flex>
+      <Image display='none' alt="" src={Flower.src} position='absolute' top="350px" right="-350px" h="200%" transform="rotate(45deg)" />
+    </Stack>
   );
 }
 
