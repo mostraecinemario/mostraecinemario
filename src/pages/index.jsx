@@ -1,42 +1,32 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaSpinner } from 'react-icons/fa';
+import { Stack, Image } from "@chakra-ui/react";
+import Card from '../components/Card';
 
-import logo from '/public/logo.png';
+import BannerMostra from "/public/homepage/banner-mostra.png";
+import BannerDrivein from "/public/homepage/banner-drivein.png";
+import BarraLateral from "/public/homepage/lateral-02.png";
+import BarraLateralH from "/public/homepage/lateral-h-02.png";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex flex-col w-screen h-screen justify-between items-center ">
+    <Stack p={10} direction={{base: 'column', md: 'row'}} justify="space-around" spacing={6} w="100%">
       <Head>
-        <title>Em breve...</title>
+        <title>Mostra de Cinema Latino-Americano de Rio Grande...</title>
       </Head>
 
-      <main className="flex flex-col flex-grow items-center justify-center">
-        <div className="animate-spin-slow mb-8">
-          <Image src={logo} alt="logotipo da mostra de cinema"   height='100px' width="100px" />
-        </div>
-        <h1 className="text-2xl font-bold">
-          Em construção...
-        </h1>
-      </main>
-      
-      <footer className="flex-none flex flex-col items-center p-6">
-        <p>Acompanhe nossas redes sociais:</p>
-        <div className="flex gap-5 pt-4">
-          <a className="hover:text-mPink" href="https://www.facebook.com/mostraderiogrande" target="_blank" rel="noopener noreferrer">
-            <FaFacebook size="30px" /> 
-          </a>
-          <a className="hover:text-mYellow" href="https://twitter.com/mostraderg" target="_blank" rel="noopener noreferrer">
-            <FaTwitter size="30px" />
-          </a>
-          <a className="hover:text-mBlue" href="https://www.instagram.com/mostraderiogrande" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size="30px" />
-          </a>
-          <a className="hover:text-mRed" href="https://www.youtube.com/channel/UCrclqDH_n9OyjoFnhYNRq_A" target="_blank" rel="noopener noreferrer">
-            <FaYoutube size="30px" />
-          </a>
-        </div>
-      </footer>
-    </div>
+      <Image display={{base: "block", md: "none"}} maxW="100%" objectFit="contain" src={BarraLateralH.src} alt="" />
+
+      <Card img={BannerMostra.src} href="/sobre">
+        A Mostra de Cinema Latino-Americano de Rio Grande surge como um  desdobramento da Mostra de Cinema OfCine, criada em 2016, para a exibição dos curtas-metragens...
+      </Card>
+    
+      <Card img={BannerDrivein.src} href="/drive-in">
+        Como abertura da 3ª Mostra de Cinema Latino-Americano de Rio Grande, um Cine Drive-in foi pensado para atender o público da cidade do Rio Grande...
+      </Card>
+
+      <Image display={{base: "none", md: "block"}} maxW="150px" objectFit="contain" src={BarraLateral.src} alt="" />
+    </Stack>
   )
 }
+
+export default Home;
