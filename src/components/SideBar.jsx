@@ -37,7 +37,7 @@ const SideBar = ({onClose, isOpen, LinkItems}) => {
           <Flex flex={1} justify="space-between">
             <Stack spacing="10" w="calc(100vw - 50px)" ps={7}>
               <Flex align="center" justify="center">
-                <Button variant="outline" color="brand.vermelho" borderWidth={3} borderColor="brand.vermelho" fontSize="30px" px="2px" py={0} opacity={.25} width="fit-content">NO AR</Button>
+                <Button variant="outline" color="brand.vermelho" borderWidth={3} borderColor="brand.vermelho" fontSize="30px" px="2px" py={0} opacity={.25} width="fit-content" disabled>NO AR</Button>
               </Flex>
               {
                 Object.values(LinkItems).map((item) => {

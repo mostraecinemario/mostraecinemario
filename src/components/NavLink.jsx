@@ -1,4 +1,4 @@
-import { Flex, Image, Link, Stack, Text } from '@chakra-ui/react';
+import { Flex, Image, Link, Stack, Text, Box } from '@chakra-ui/react';
 import Elem31 from '/public/identidade_visual/elementos identidade visual-31.png'
 import Elem27 from '/public/identidade_visual/elementos identidade visual-27.png'
 
@@ -15,8 +15,20 @@ const NavLink = ({ item, subMenu=false, color }) => {
       </Flex>
       {subMenu && item.children && 
         <Stack spacing="1" ps={16}>
-          {item.children.map(child => (
-            <Link key={child.href} href={child.href} color={color} fontSize="18px" fontWeight="bold" textTransform="uppercase">{child.label}</Link>
+          {item.children.map(({isDisabled, label, href}) => (
+            <>
+              {isDisabled && 
+                <Text key={href} color={color} fontSize="18px" fontWeight="bold" textTransform="uppercase" opacity={.5}>
+                  {label}
+                </Text>
+              }
+
+              {!isDisabled && 
+                <Link key={href} href={href} color={color} fontSize="18px" fontWeight="bold" textTransform="uppercase">
+                  {label}
+                </Link>
+              }
+            </>
           ))}
         </Stack>
       }

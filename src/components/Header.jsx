@@ -1,4 +1,4 @@
-import { Flex, Image, Icon, useDisclosure, Stack, Link, Menu} from '@chakra-ui/react';
+import { Flex, Image, Icon, useDisclosure, Stack, Link, Menu, Button } from '@chakra-ui/react';
 import { CgMenuRight } from 'react-icons/cg';
 
 import NavLink from './NavLink';
@@ -66,6 +66,9 @@ const Header = () => {
                 )
               })
             }
+            <Flex align="center" justify="center">
+              <Button variant="outline" color="brand.amarelo" borderWidth={3} borderColor="brand.amarelo" fontSize="30px" px="2px" py={0} opacity={.5} width="fit-content"disabled >NO AR</Button>
+            </Flex>
         </Stack>
       </Flex>
     </Flex>
