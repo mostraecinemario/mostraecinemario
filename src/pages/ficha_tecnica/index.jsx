@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Text, Box, Flex, Image, Stack } from "@chakra-ui/react";
 
 import Elem22 from "/public/identidade_visual/elementos identidade visual-22.png";
@@ -29,7 +30,7 @@ const listContent = [
   },
   {
     title: 'Curadoria:',
-    names: ['Jaqueline Nunes', 'Lucas Honorato', 'André Berzagui', 'Marcelo Gobatto']
+    names: ['Jaqueline Nunes', 'Lucas Honorato', 'André Berzagui', 'Marcelo Gobatto', 'Paulo Ferreira']
   },
   {
     title: 'Assessoria de imprensa:',
@@ -56,6 +57,9 @@ const listContent = [
 const List = () => {
   return (
     <Stack spacing={5}>
+      <Head>
+        <title>Ficha Técnica | Mostra de Cinema Latino-Americano de Rio Grande...</title>
+      </Head>
       {listContent.map((item, index) => (
         <Box key={index} >
           <Flex align="center">

@@ -29,7 +29,7 @@ const Header = () => {
     atividades: {
       label: "Atividades",
       children: [
-        {label: "Cine Debate", href: '/atividades/cine-debate', isDisabled: true},
+        {label: "Lives", href: '/atividades/cine-debate', isDisabled: true},
         {label: "Cine drive-in", href: '/drive-in'}
       ]
     }

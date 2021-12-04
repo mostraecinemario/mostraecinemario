@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Stack, Image } from "@chakra-ui/react";
 import Card from '../components/Card';
 
@@ -9,6 +10,10 @@ import BarraLateralH from "/public/homepage/lateral-h-02.png";
 const Home = () => {
   return (
     <Stack p={10} direction={{base: 'column', md: 'row'}} justify="space-around" spacing={6} w="100%">
+      <Head>
+        <title>Mostra de Cinema Latino-Americano de Rio Grande...</title>
+      </Head>
+
       <Image display={{base: "block", md: "none"}} maxW="100%" objectFit="contain" src={BarraLateralH.src} alt="" />
 
       <Card img={BannerMostra.src} href="/sobre">

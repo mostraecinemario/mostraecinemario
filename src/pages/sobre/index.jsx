@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Text, Box, Flex, Image } from '@chakra-ui/react';
 
 import Elem22 from '/public/identidade_visual/elementos identidade visual-22.png'
@@ -24,6 +25,10 @@ const About = () => {
 
   return (
     <Box px={{base: 0, md: 12}}>
+      <Head>
+        <title>Sobre | Mostra de Cinema Latino-Americano de Rio Grande...</title>
+      </Head>
+
       <Flex align="center">
         <Image src={Elem22.src} alt="Elemento da identidade visual em formato de flor" h="18px" />
         <Text ms={2} fontWeight="bold" color="brand.azul" fontSize="22px" textTransform="uppercase">

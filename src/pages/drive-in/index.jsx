@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Text, Box, Flex, Image, Stack, Link } from "@chakra-ui/react";
 
 import Cartaz from "/public/drivein/responsabilidad_empresarial.png";
@@ -8,6 +9,9 @@ import Title from "/public/drivein/title.png"
 const DriveIn = () => {
   return (
     <Stack py={5} spacing={5}>
+      <Head>
+        <title>Cine Drive-in | Mostra de Cinema Latino-Americano de Rio Grande...</title>
+      </Head>
       <Flex direction={{base:"column", md:"row"}} px={{md: 24}} align="center" justify="center">
         <Image h="300px" objectFit="contain" src={Title.src} alt="cine drive-in" />
         <Box className="justify">
@@ -43,7 +47,12 @@ const DriveIn = () => {
         <Stack ms={{base: 0, md: 5}} spacing={5}  alignSelf={{base: 'flex-end', md: 'flex-start'}} >
           <Image maxH="200px" objectFit="contain" src={Date.src} alt="9/12 às 20h30 Estacionamento do Porto Velho de Rio Grande" />
     
-          <Link href='https://forms.gle/hDcf6sWK1LHuTDEo8' target="_blank">
+          <Link 
+            href='https://forms.gle/hDcf6sWK1LHuTDEo8' 
+            target="_blank" 
+            transition="all 1s" 
+            _hover={{transform: 'scale(1.1)'}}
+          >
             <Image maxH="300px" objectFit="contain" alt="Inscreva-se" src={ButtonImg.src} />
           </Link>
         </Stack>
