@@ -34,5 +34,5 @@ a {
 }
 
 .footer img {
-  width: fit-content;
+  object-fit: contain;
 }
