@@ -1,39 +1,15 @@
 import { Flex, Image, Icon, useDisclosure, Stack, Link, Menu, Button } from '@chakra-ui/react';
 import { CgMenuRight } from 'react-icons/cg';
 
-import NavLink from './NavLink';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
 
 import Elem18 from '/public/identidade_visual/elementos identidade visual-18.png'
-//import Logo from '/public/logos/logo.png'
+
+import Navigation from '/src/utils/navigation.js'
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  
-  const LinkItems = {
-    aMostra: {
-      label: "A Mostra",
-      children: [
-        {label: "Sobre", href: '/sobre'},
-        {label: "Ficha Técnica", href: '/ficha_tecnica'}
-      ]
-    },
-    filmes: {
-      label: "Filmes",
-      children: [
-        {label: "curtas latino-americanos", href: '/filmes/mostra-principal', isDisabled: true},
-        {label: "cinemas insurgentes", href: '/filmes/mostra-paralela', isDisabled: true}
-      ]
-    },
-    atividades: {
-      label: "Atividades",
-      children: [
-        {label: "Lives", href: '/atividades/cine-debate', isDisabled: true},
-        {label: "Cine drive-in", href: '/drive-in'}
-      ]
-    }
-  };
 
   return (
     <Flex 
@@ -53,12 +29,12 @@ const Header = () => {
         <Icon as={CgMenuRight} w="40px" h="40px" color="brand.amarelo" onClick={onOpen} />
       </Flex>
 
-      <SideBar onClose={onClose} isOpen={isOpen} LinkItems={LinkItems} />
+      <SideBar onClose={onClose} isOpen={isOpen} LinkItems={Navigation} />
 
       <Flex display={{base: 'none', md:'flex'}}>
         <Stack spacing="10" direction="row">
             {
-              Object.values(LinkItems).map((item) => {
+              Object.values(Navigation).map((item) => {
                 return (
                   <Menu key={item.label}>
                     <NavBar item={item} />
