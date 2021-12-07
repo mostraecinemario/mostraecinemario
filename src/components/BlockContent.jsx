@@ -29,13 +29,13 @@ const BlockContent = ({title, block, setCurrentMovie, onOpen, wrap= false}) => {
         ))}
         {wrap && (
           <Flex
-            maxH={{base: "200px", md: "350px"}}
+            maxH="200px"
             objectFit="contain"
             flex={'20%'}
             justify="center"
             display={{ base: 'none', md: 'flex' }}
           >
-          <Image objectFit="contain" maxH={{base: "200px", md: "350px"}} src={Flower.src} alt="" />
+          <Image objectFit="contain" maxH="200px" src={Flower.src} alt="" />
         </Flex>
         )}
       </Stack>
