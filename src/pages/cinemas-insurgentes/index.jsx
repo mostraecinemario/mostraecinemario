@@ -31,7 +31,6 @@ const CinemasInsurgentes = () => {
             setCurrentMovie={setCurrentMovie}
             onOpen={onOpen}
             wrap
-            flower
           />
 
           <BlockContent

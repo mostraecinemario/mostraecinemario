@@ -2,7 +2,7 @@ import { Text, Box, Flex, Image, Stack } from '@chakra-ui/react';
 
 import Flower from '/public/identidade_visual/elementos identidade visual-21.png';
 
-const BlockContent = ({title, block, setCurrentMovie, onOpen, wrap= false, flower=false}) => {
+const BlockContent = ({title, block, setCurrentMovie, onOpen, wrap= false}) => {
   return (
     <Stack align="center">
       <Text className="movies-title" color="brand.vermelho" ms={3} mb={3} alignSelf="flex-start">
@@ -27,7 +27,7 @@ const BlockContent = ({title, block, setCurrentMovie, onOpen, wrap= false, flowe
             <Image objectFit="contain" maxH={{base: "200px", md: "350px"}} src={movie.img} alt="" />
           </Flex>
         ))}
-        {flower && (
+        {wrap && (
           <Flex
             maxH={{base: "200px", md: "350px"}}
             objectFit="contain"
