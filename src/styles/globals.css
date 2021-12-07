@@ -42,3 +42,7 @@ a {
   font-weight: 700;
   font-size: 30px;
 }
+
+.movies-block {
+  gap: var(--chakra-space-4);
+}

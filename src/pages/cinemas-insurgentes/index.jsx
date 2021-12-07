@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import { useState } from 'react';
-import { Flex, Stack, useDisclosure, Heading } from '@chakra-ui/react';
+import { Flex, Stack, useDisclosure, Image } from '@chakra-ui/react';
 
+import HeaderImg from "/public/cine_insurgentes.png"
 import Blocos from '/src/utils/blocos.js';
 
 import MovieModal from '../../components/MovieModal';
 import BlockContent from '../../components/BlockContent';
+
 
 const CinemasInsurgentes = () => {
   const [currentMovie, setCurrentMovie] = useState({});
@@ -18,10 +20,8 @@ const CinemasInsurgentes = () => {
           <title>Cinemas Insurgentes | Mostra de Cinema Latino-Americano de Rio Grande...</title>
         </Head>
 
-        <Flex direction={{base: 'column', md: 'row'}} flex={1} align="center" justify="space-around" mb={5}>
-          <Heading className="movies-title" color="brand.vermelho" fontSize="45px">
-            mostra cinemas insurgentes
-          </Heading>
+        <Flex flex={1} direction={{base: 'column', md: 'row'}} align="center" justify="center" mb={5}>
+          <Image src={HeaderImg.src} alt="mostra de curtas latino-americanos" maxH="200px" objectFit="contain" />
         </Flex>
 
         <Stack align="center" px={3} spacing={10}>
@@ -30,6 +30,8 @@ const CinemasInsurgentes = () => {
             block={Blocos.cinemasInsurgentes.bloco1}
             setCurrentMovie={setCurrentMovie}
             onOpen={onOpen}
+            wrap
+            flower
           />
 
           <BlockContent

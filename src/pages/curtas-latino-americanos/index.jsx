@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useState } from 'react';
-import { Text, Box, Flex, Heading, Stack, useDisclosure } from '@chakra-ui/react';
+import { Image, Flex, Heading, Stack, useDisclosure } from '@chakra-ui/react';
 
-import ButtonImg from "/public/drivein/button.png"
+import HeaderImg from "/public/curtas_latinos.png"
 import Blocos from '/src/utils/blocos.js';
 
 import MovieModal from '../../components/MovieModal';
@@ -19,10 +19,8 @@ const MostraPrincipal = () => {
           <title>Curtas Latino-americano | Mostra de Cinema Latino-Americano de Rio Grande...</title>
         </Head>
 
-        <Flex flex={1} direction={{base: 'column', md: 'row'}} align="center" justify="space-around" mb={5}>
-          <Heading className="movies-title" color="brand.vermelho">
-            mostra de curtas latino-americanos
-          </Heading>
+        <Flex flex={1} direction={{base: 'column', md: 'row'}} align="center" justify="center" mb={5}>
+          <Image src={HeaderImg.src} alt="mostra de curtas latino-americanos" maxH="200px" objectFit="contain" />
         </Flex>
 
         <Stack align="center" px={3} spacing={10}>
