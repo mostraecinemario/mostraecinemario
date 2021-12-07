@@ -48,7 +48,7 @@ const About = () => {
       <Format img={Cartaz2020.src}>
         Para que a edição de 2020  pudesse acontecer, muitas mudanças e adaptações precisaram ser feitas devido a necessidade de isolamento social, causado pela pandemia do COVID-19. A Mostra buscou visibilizar as iniciativas cinematográficas (curtas-metragens) potencialmente descolonizadoras de sujeitos e territórios – sobretudo aquelas onde os grupos subalternizados assumem o lugar de enunciação, criando as próprias obras com suas linguagens e problemáticas, agindo de forma a elaborar narrativas contra-hegemônicas em termos de epistemologia territorial e geopolítica do conhecimento (MIGNOLO, 2003). Rastreando intersecções entre as produções cinematográficas latino-americanas recentes, o evento montou sua programação a partir de problematizações contemporâneas apontando caminhos para a sociedade que queremos construir.  
       </ Format>
-      <Text>
+      <Text className="justify">
       Neste ano a Mostra propõe como elemento curatorial a bifurcação entre momentos políticos importantes para a América Latina. A atual crise  político-econômica aliada ao pretexto sanitário do COVID-19 nos permitem enxergar um futuro? 
       Entre distopias e fabulações sobre o que nos espera nos traz um caminho entre a civilização e a barbárie
       </Text>
