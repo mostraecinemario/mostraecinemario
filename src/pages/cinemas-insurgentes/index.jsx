@@ -7,6 +7,7 @@ import Blocos from '/src/utils/blocos.js';
 
 import MovieModal from '../../components/MovieModal';
 import BlockContent from '../../components/BlockContent';
+import LoginButton from '../../components/LoginButton';
 
 
 const CinemasInsurgentes = () => {
@@ -20,8 +21,12 @@ const CinemasInsurgentes = () => {
           <title>Cinemas Insurgentes | Mostra de Cinema Latino-Americano de Rio Grande...</title>
         </Head>
 
-        <Flex flex={1} direction={{base: 'column', md: 'row'}} align="center" justify="center" mb={5}>
+        <Flex flex={1} align="center" justify="center" mb={5}>
           <Image src={HeaderImg.src} alt="mostra de curtas latino-americanos" maxH="200px" objectFit="contain" />
+        </Flex>
+
+        <Flex flex={1} align="center" justify="flex-end">
+          <LoginButton />
         </Flex>
 
         <Stack align="center" px={3} spacing={10}>

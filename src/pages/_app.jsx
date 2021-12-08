@@ -1,4 +1,5 @@
-import { ChakraProvider, extendTheme, Flex, Box } from "@chakra-ui/react"
+import { ChakraProvider, extendTheme, Flex } from "@chakra-ui/react"
+import { SessionProvider } from "next-auth/react";
 import Header from "../components/Header";
 import SocialBar from '../components/SocialBar';
 import Footer from "../components/Footer";
@@ -15,20 +16,22 @@ const colors = {
 
 const theme = extendTheme({ colors })
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme} resetCSS>
-      <Header />
+    <SessionProvider session={pageProps.session}>
+      <ChakraProvider theme={theme} resetCSS>
+        <Header />
 
-      <Flex w="calc(100vw - 50px)" p={3}>
-        <Component flex={1} {...pageProps} />
-      </Flex>
+        <Flex w="calc(100vw - 50px)" p={3}>
+          <Component flex={1} {...pageProps} />
+        </Flex>
 
-      <SocialBar />
+        <SocialBar />
 
-      <Footer />
-    </ChakraProvider>
+        <Footer />
+      </ChakraProvider>
+    </SessionProvider>
   )
 }
 
-export default MyApp
+export default App
