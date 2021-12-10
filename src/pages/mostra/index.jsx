@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { 
   Flex, 
   Stack, 
@@ -36,6 +37,9 @@ const Mostra = ({user}) => {
 
   return (
     <>
+      <Head>
+        <title>Curtas Latino-americano | Mostra de Cinema Latino-Americano de Rio Grande...</title>
+      </Head>
       <Stack flex={1} mb={10}>
         <Flex flex={1} justify="flex-end" me={20}>
           <Menu>
@@ -64,8 +68,8 @@ const Mostra = ({user}) => {
           <Image src={CurtasLatinos.src} alt="mostra de curtas latino-americanos" maxH="150px" objectFit="contain" />
           <Stack>
             <BlockContent 
-              title="bloco 1"
-              block={Blocos.curtasLatinoAmericanos.bloco1}
+              title="bloco 2"
+              block={Blocos.curtasLatinoAmericanos.bloco2}
               setCurrentMovie={setCurrentMovie}
               onOpen={onOpen}
             />
@@ -76,13 +80,12 @@ const Mostra = ({user}) => {
           <Image src={CinemasInsurgentes.src} alt="mostra de curtas latino-americanos" maxH="150px" objectFit="contain" />
           <Stack>
             <Text className="movies-title" color="brand.vermelho" ms={3} mb={3} alignSelf="flex-end">
-              bloco 1
+              bloco 2
             </Text>
             <BlockContent 
-              block={Blocos.cinemasInsurgentes.bloco1}
+              block={Blocos.cinemasInsurgentes.bloco2}
               setCurrentMovie={setCurrentMovie}
               onOpen={onOpen}
-              wrap
             />
           </Stack>
         </Stack>
