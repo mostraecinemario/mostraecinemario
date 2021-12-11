@@ -68,22 +68,8 @@ const Mostra = ({user}) => {
           <Image src={CurtasLatinos.src} alt="mostra de curtas latino-americanos" maxH="150px" objectFit="contain" />
           <Stack>
             <BlockContent 
-              title="bloco 2"
-              block={Blocos.curtasLatinoAmericanos.bloco2}
-              setCurrentMovie={setCurrentMovie}
-              onOpen={onOpen}
-            />
-          </Stack>
-        </Stack>
-
-        <Stack align="flex-end" px={3} spacing={10} flex={1}>
-          <Image src={CinemasInsurgentes.src} alt="mostra de curtas latino-americanos" maxH="150px" objectFit="contain" />
-          <Stack>
-            <Text className="movies-title" color="brand.vermelho" ms={3} mb={3} alignSelf="flex-end">
-              bloco 2
-            </Text>
-            <BlockContent 
-              block={Blocos.cinemasInsurgentes.bloco2}
+              title="bloco 3"
+              block={Blocos.curtasLatinoAmericanos.bloco3}
               setCurrentMovie={setCurrentMovie}
               onOpen={onOpen}
             />
