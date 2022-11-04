@@ -1,4 +1,4 @@
-import { Flex, Image, Icon, useDisclosure, Stack, Link, Menu, Button } from '@chakra-ui/react';
+import { Flex, Image, Icon, useDisclosure, Stack, Link, Menu, Divider } from '@chakra-ui/react';
 import { CgMenuRight } from 'react-icons/cg';
 
 import NavBar from './NavBar';
@@ -18,8 +18,8 @@ const Header = () => {
       top="0"
       zIndex="1"
       align="center"
-      bg="brand.vermelho"
       justify="space-between"
+      direction={{base:'row', md: 'column' }}
     >
       <Link href="/">
         <Image maxH="120px" src={Elem18.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
@@ -31,22 +31,21 @@ const Header = () => {
 
       <SideBar onClose={onClose} isOpen={isOpen} LinkItems={Navigation} />
 
-      <Flex display={{base: 'none', md:'flex'}}>
-        <Stack spacing="10" direction="row">
-            {
-              Object.values(Navigation).map((item) => {
-                return (
-                  <Menu key={item.label}>
-                    <NavBar item={item} />
-                  </Menu>
-                )
-              })
-            }
-            <Flex align="center" justify="center">
-              <Button variant="outline" color="brand.amarelo" borderWidth={3} borderColor="brand.amarelo" fontSize="30px" px="2px" py={0} opacity={.5} width="fit-content"disabled >NO AR</Button>
-            </Flex>
-        </Stack>
-      </Flex>
+      <Stack display={{base: 'none', md:'flex'}} mt={5} spacing={5}>
+        <Divider borderColor='brand.vermelho' />
+          <Stack spacing="10" direction="row">
+              {
+                Object.values(Navigation).map((item) => {
+                  return (
+                    <Menu key={item.label}>
+                      <NavBar item={item} />
+                    </Menu>
+                  )
+                })
+              }
+          </Stack>
+        <Divider borderColor='brand.vermelho' />
+      </Stack>
     </Flex>
   );
 };
