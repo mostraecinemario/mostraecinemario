@@ -13,7 +13,6 @@ const Mostra = ({user}) => {
       <Stack flex={1} mb={10}>
         <Heading>Encerrado!</Heading>
       </Stack>
-
     </>
   );
 }
