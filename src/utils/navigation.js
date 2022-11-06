@@ -1,25 +1,25 @@
 const Navigation = {
-  aMostra: {
-    label: "A Mostra",
+  atividades: {
+    label: "Esta edição",
     children: [
-      {label: "Sobre", href: '/sobre'},
-      {label: "Ficha Técnica", href: '/ficha-tecnica'}
+      {label: "Curadoria", href: '/curadoria'}
     ]
   },
   filmes: {
-    label: "Filmes",
+    label: "Programação",
     children: [
-      {label: "curtas latino-americanos", href: '/curtas-latino-americanos'},
-      {label: "cinemas insurgentes", href: '/cinemas-insurgentes'}
+      {label: "oficinas", href: '/oficinas'},
+      {label: "cinema itinerante", href: '/cinema-itinerante'},
+      {label: "mesas", href: '/mesas'}
     ]
   },
-  atividades: {
-    label: "Atividades",
+  aMostra: {
+    label: "Histórico",
     children: [
-      {label: "Lives", href: '/atividades/cine-debate', isDisabled: true},
-      {label: "Cine drive-in", href: '/drive-in'}
+      {label: "Edições passadas", href: '/edicoes-passadas'},
+      {label: "Ficha Técnica", href: '/ficha-tecnica'}
     ]
-  }
+  },
 };
 
 export default Navigation;

@@ -7,7 +7,6 @@ import Blocos from '/src/utils/blocos.js';
 
 import MovieModal from '../../components/MovieModal';
 import BlockContent from '../../components/BlockContent';
-import LoginButton from '../../components/LoginButton';
 
 const MostraPrincipal = () => {
   const [currentMovie, setCurrentMovie] = useState({});
@@ -21,11 +20,7 @@ const MostraPrincipal = () => {
         </Head>
 
         <Flex flex={1} align="center" justify="center" mb={5}>
-          <Image src={HeaderImg.src} alt="mostra de curtas latino-americanos" maxH="200px" objectFit="contain" />
-        </Flex>
-
-        <Flex flex={1} align="center" justify="flex-end">
-          <LoginButton />
+          <Image src={HeaderImg.src} alt="mostra de curtas latino-americanos" maxH="150px" objectFit="contain" />
         </Flex>
 
         <Stack align="center" px={3} spacing={10}>
