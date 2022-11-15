@@ -35,6 +35,7 @@ export const programacao = [
         hour: '14h',
         title: 'Oficina:Introdução a Produção Audiovisual, por Flávia Seligman',
         description: ['Local: IFRS-Campus Rio Grande, prédio 8 - NPA-OFCINE', 'Inscrição: 25 vagas inscrições pelo link'],
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSfeAfCLf_4xJ2uVE2UraSuEv0cTvba6-L5hugGAZxa6vs7FQg/viewform?usp=sf_link"
       },
       {
         hour: '19h',
@@ -57,11 +58,13 @@ export const programacao = [
         hour: '9h',
         title: 'Oficina: Narrar com a Câmera, por Roberto Cotta - parte 1',
         description: ['Local: IFRS-Campus Rio Grande, prédio 8 - NPA-OFCINE', 'Inscrição: 25 vagas inscrições pelo link'],
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSf982ThrqgBZCNcnCqZ4Kb2cGZln7YqXE542u02OfPsWYJq_A/viewform?usp=sf_link"
       },
       {
         hour: '14h',
         title: 'Oficina: Narrar com a Câmera, por Roberto Cotta - parte 2',
         description: ['Local: IFRS-Campus Rio Grande, prédio 8 - NPA-OFCINE', 'Inscrição: 25 vagas inscrições pelo link'],
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSf982ThrqgBZCNcnCqZ4Kb2cGZln7YqXE542u02OfPsWYJq_A/viewform?usp=sf_link"
       },
       {
         hour: '19h',
@@ -84,6 +87,7 @@ export const programacao = [
         hour: '9h',
         title: 'Oficina: A imagem é uma Sereia, por Lívia Pasqual - parte 1',
         description: ['Local: IFRS-Campus Rio Grande, prédio 8 - NPA-OFCINE', 'Inscrição: 25 vagas inscrições pelo link'],
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSdzxzDemG-n_K77D7ky4WnA9ungH_wTVLfCBAVMMHgTFQWVVw/viewform?usp=sf_link"
       },
       {
         hour: '19h',
@@ -106,6 +110,7 @@ export const programacao = [
         hour: '9h',
         title: 'Oficina: A imagem é uma Sereia, por Lívia Pasqual - parte 2',
         description: ['Local: IFRS-Campus Rio Grande, prédio 8 - NPA-OFCINE', 'Inscrição: 25 vagas inscrições pelo link'],
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSdzxzDemG-n_K77D7ky4WnA9ungH_wTVLfCBAVMMHgTFQWVVw/viewform?usp=sf_link"
       },
       {
         hour: '19h',
