@@ -14,8 +14,8 @@ const MostraPrincipal = () => {
           <title>Programação | Mostra de Cinema Latino-Americano de Rio Grande...</title>
         </Head>
         <Flex justify={'center'}>
-          <Tabs variant='unstyled' flex={.7} justifyContent='center'>
-            <TabList gap={20}>
+          <Tabs variant='unstyled' flex={.7}>
+            <TabList gap={20} justifyContent='center'>
                 {filteredTabs.map(item => (
                   <Tab _selected={{ color: 'white', bg: 'brand.vermelho' }} _focus={{}} fontWeight={600} key={`${item.date - item.weekDay}`}>
                     <Stack >
