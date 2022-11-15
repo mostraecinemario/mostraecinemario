@@ -2,7 +2,7 @@ const Navigation = {
   aMostra: {
     label: "A mostra",
     children: [
-      {label: "Edições passadas", href: '/edicoes-passadas'},
+      {label: "Sobre", href: '/sobre'},
       {label: "Ficha Técnica", href: '/ficha-tecnica'}
     ]
   },
