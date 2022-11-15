@@ -17,6 +17,10 @@ const listContent = [
     names: ['Gianluca Cozza']
   },
   {
+    title: 'Assistente de Produção:',
+    names: ['Gianluca Cozza']
+  },
+  {
     title: 'Identidade Visual:',
     names: ['Jordan Martins']
   },
@@ -25,49 +29,32 @@ const listContent = [
     names: ['Cassiana Silveira']
   },
   {
-    title: 'Assistentes de produção:',
-    names: ['Gabrielle Peres', 'Taís dos Santos']
-  },
-  {
     title: 'Curadoria:',
-    names: ['Jaqueline Nunes', 'Lucas Honorato', 'André Berzagui', 'Marcelo Gobatto', 'Paulo Ferreira']
+    names: ['Lucas Honorato', 'André Berzagui', 'Rubens Fabricio Anzolin']
   },
   {
     title: 'Assessoria de imprensa:',
-    names: ['Marislei Ribeiro', 'Maria Rita Rolim', 'Marisa Campos', 'Marianna Bertoldi', 'Leonardo Oliveira', 'Carolina Soares']
+    names: ['Lisandra Miranda', 'Brenda Pacheco', 'Milene Louzada']
   },
   {
     title: 'Social Media:',
-    names: ['Carolina Amorim', 'Samantha Beduhn','Eduarda Saraiva']
-  },
-  {
-    title: 'Redação:',
-    names: ['Rafaela Stark','Victória Silva','Caroline Quincozes','Alexia Azambuja','Bruna Meotti']
-  },
-  {
-    title: 'Apoio visual:',
-    names: ['Julia Vilas Boas','Leticia Vieira','Nadolpho Neto']
+    names: ['Gabriele Peres', 'Ana Luiza Souza','Rafaella Cruz', 'Vinícius Barcellos']
   },
   {
     title: 'Colaboradores:',
-    names: ['Adryan Copello', 'Jean Amaral', 'Angelita Fialho', 'Miguel Albuquerque', 'Dardo Bornia Jr.']
+    names: ['Adryan Copello', 'Jean Amaral', 'Valentina Acosta', 'Angelita Fialho', 'Miguel Albuquerque', 'Aline Dias']
   },
 ] 
 
 const List = () => {
   return (
-    <Stack spacing={5}>
+    <Stack spacing={5} p={5}>
       <Head>
         <title>Ficha Técnica | Mostra de Cinema Latino-Americano de Rio Grande...</title>
       </Head>
       {listContent.map((item, index) => (
         <Box key={index} >
           <Flex align="center">
-            <Image
-              src={Elem22.src}
-              alt="Elemento da identidade visual em formato de flor"
-              h="18px"
-            />
             <Text
               ms={2}
               fontWeight="bold"

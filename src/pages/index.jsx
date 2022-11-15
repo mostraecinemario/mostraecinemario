@@ -6,7 +6,7 @@ import { carrousselImages } from '../utils/carroussel_images';
 
 const Home = () => {
   return (
-    <Stack p={3} direction={{base: 'column', md: 'row'}} justify="space-around" spacing={6} w="100%">
+    <Stack p={3} pl={0} direction={{base: 'column', md: 'row'}} justify="space-around" spacing={6} w="100%">
       <Head>
         <title>Mostra de Cinema Latino-Americano de Rio Grande...</title>
       </Head>

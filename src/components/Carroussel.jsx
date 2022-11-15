@@ -19,9 +19,9 @@ const Carroussel = ({images}) => {
   
   return (
     <Flex flex={1} alignItems='center'>
-      <Icon as={IoIosArrowDropleftCircle} onClick={nextImage} cursor='pointer' position='absolute' left={10} fontSize={45} color='brand.vermelho' />
+      <Icon as={IoIosArrowDropleftCircle} onClick={nextImage} cursor='pointer' position='absolute' left={4} fontSize={45} color='brand.vermelho' />
       <Image src={images[currentImage]} w='100%' maxH={600} objectFit='cover' alt='Imagem de mostras passadas' />
-      <Icon as={IoIosArrowDroprightCircle} onClick={previousImage} cursor='pointer' position='absolute' right={16} fontSize={45} color='brand.vermelho' />
+      <Icon as={IoIosArrowDroprightCircle} onClick={previousImage} cursor='pointer' position='absolute' right={20} fontSize={45} color='brand.vermelho' />
     </Flex>
   )
 } 

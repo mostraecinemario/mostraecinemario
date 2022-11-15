@@ -19,7 +19,7 @@ import { CgClose } from 'react-icons/cg';
 import NavLink from './NavLink';
 import SocialBar from './SocialBar';
 
-import Elem18 from '/public/identidade_visual/elementos identidade visual-18.png'
+import Logotipo from '/public/main_logo.png'
 
 const SideBar = ({onClose, isOpen, LinkItems}) => {
   return (
@@ -29,7 +29,7 @@ const SideBar = ({onClose, isOpen, LinkItems}) => {
         <DrawerHeader>
           <Flex justify="space-between" align="center">
             <Link href="/">
-              <Image maxH="120px" src={Elem18.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
+              <Image maxH="80px" src={Logotipo.src} alt="4ª Mostra de Cinema Latino-Americano de Rio Grande"/>
             </Link>
             <Icon as={CgClose} boxSize="40px" color="brand.amarelo" onClick={onClose} />
           </Flex>
