@@ -10,7 +10,7 @@ const CinemaItinerante = () => {
 
       <Stack flex='.8'>
         <AspectRatio ratio={{base: 1 / 2, md: 16 / 9}}>
-          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1WwbEK1UqypIP20SJb9ro74bMCT8ctnk&ehbc=2E312F"></iframe>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1MNCoheTDHkGObLQOq5cOFqn7qv9ePE0&ehbc=2E312F"></iframe>
         </AspectRatio>
       </Stack>
 

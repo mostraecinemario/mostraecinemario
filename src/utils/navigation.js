@@ -8,9 +8,8 @@ const Navigation = {
   filmes: {
     label: "Programação",
     children: [
-      {label: "oficinas", href: '/oficinas'},
+      {label: "programação", href: '/programacao'},
       {label: "cinema itinerante", href: '/cinema-itinerante'},
-      {label: "mesas", href: '/mesas'}
     ]
   },
   aMostra: {

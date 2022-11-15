@@ -4,7 +4,7 @@ import { CgMenuRight } from 'react-icons/cg';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
 
-import Elem18 from '/public/identidade_visual/elementos identidade visual-18.png'
+import Logotipo from '/public/main_logo.png'
 
 import Navigation from '/src/utils/navigation.js'
 
@@ -22,7 +22,7 @@ const Header = () => {
       direction={{base:'row', md: 'column' }}
     >
       <Link href="/">
-        <Image maxH="120px" src={Elem18.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
+        <Image maxH="220px" src={Logotipo.src} alt="3ª Mostra de Cinema Latino-Americano de Rio Grande"/>
       </Link>
 
       <Flex display={{base: 'flex', md:'none'}}>
@@ -31,7 +31,7 @@ const Header = () => {
 
       <SideBar onClose={onClose} isOpen={isOpen} LinkItems={Navigation} />
 
-      <Stack display={{base: 'none', md:'flex'}} mt={5} spacing={5}>
+      <Stack display={{base: 'none', md:'flex'}} spacing={5}>
         <Divider borderColor='brand.vermelho' />
           <Stack spacing="10" direction="row">
               {
