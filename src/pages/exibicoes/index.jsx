@@ -8,7 +8,7 @@ const CinemaItinerante = () => {
         <title>Cinema Itinerante | Mostra de Cinema Latino-Americano de Rio Grande</title>
       </Head>
 
-      <Text fontWeight="bold" alignSelf={"start"} px="20%" fontSize="4xl" textTransform="uppercase" mb={10}>Oficinas</Text>
+      <Text fontWeight="bold" alignSelf={"start"} px="20%" fontSize="4xl" textTransform="uppercase" mb={10}>Exibições</Text>
       <Stack flex='.8'>
         <AspectRatio ratio={{base: 1 / 2, md: 16 / 9}}>
           <iframe src="https://www.google.com/maps/d/embed?mid=1MNCoheTDHkGObLQOq5cOFqn7qv9ePE0&ehbc=2E312F"></iframe>
