@@ -9,36 +9,35 @@ import {
   MenuItem
 } from '@chakra-ui/react';
 import Elem31 from '/public/identidade_visual/elementos identidade visual-31.png'
-import Elem27 from '/public/identidade_visual/elementos identidade visual-27.png'
+import Elem20 from '/public/identidade_visual/elementos identidade visual-20.png'
 
 const NavBar = ({ item }) => {
   return (
     <Stack key={item.label}>
-      <MenuButton>
-        <Flex align="center">
-            <Image src={Elem27.src} h="35px" pe={2} alt="" />
-            {item.children && 
-              <Text color="white" fontSize="25px" fontWeight="bold" textTransform="uppercase">
-                {item.label}
-              </Text>
-            }
-        </Flex>
-      </MenuButton>
-      <MenuList>
-        {item.children && 
-          <Stack spacing="1">
-            {item.children.map(({isDisabled, label, href}) => (
-              <MenuItem key={href} isDisabled={isDisabled || false} color="brand.amarelo" fontSize="18px" fontWeight="bold" textTransform="uppercase">
-                {isDisabled && label }
-
-                {!isDisabled && 
+      {item.children ? 
+        <>
+        <MenuButton>
+          <Flex align="center">
+            <Text color="brand.vermelho" fontSize="20px" fontWeight="bold" textTransform="uppercase">
+              {item.label}
+            </Text>
+          </Flex>
+        </MenuButton>
+        <MenuList>
+          {item.children && 
+            <Stack spacing="1">
+              {item.children.map(({label, href}) => (
+                <MenuItem key={href} color="brand.amarelo" fontSize="18px" fontWeight="bold" textTransform="uppercase">
                   <Link href={href} >{label}</Link>
-                }
-              </MenuItem>
-            ))}
-          </Stack>
-        }
-      </MenuList>
+                </MenuItem>
+              ))}
+            </Stack>
+          }
+        </MenuList>
+        </> 
+        : 
+        <Link href={item.href} _hover={{}} color="brand.vermelho" fontSize="20px" fontWeight="bold" textTransform="uppercase">{item.label}</Link>
+      }
     </Stack>
   );
 };

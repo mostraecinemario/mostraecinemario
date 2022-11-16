@@ -1,25 +1,29 @@
 const Navigation = {
   aMostra: {
-    label: "A Mostra",
+    label: "A mostra",
     children: [
       {label: "Sobre", href: '/sobre'},
       {label: "Ficha Técnica", href: '/ficha-tecnica'}
     ]
   },
-  filmes: {
-    label: "Filmes",
+  atividades: {
+    label: "Edição 2022",
     children: [
-      {label: "curtas latino-americanos", href: '/curtas-latino-americanos'},
-      {label: "cinemas insurgentes", href: '/cinemas-insurgentes'}
+      {label: "4ªMCLARG", href: '/4mclarg'},
     ]
   },
-  atividades: {
-    label: "Atividades",
-    children: [
-      {label: "Lives", href: '/atividades/cine-debate', isDisabled: true},
-      {label: "Cine drive-in", href: '/drive-in'}
-    ]
-  }
+  filmes: {
+    label: "Programação",
+    href: '/programacao'
+  },
+  mapa: {
+    label: "exibições",
+    href: '/exibicoes'
+  },
+  oficinas: {
+    label: "oficinas",
+    href: '/oficinas'
+  },
 };
 
 export default Navigation;

@@ -22,7 +22,7 @@ function App({ Component, pageProps }) {
       <ChakraProvider theme={theme} resetCSS>
         <Header />
 
-        <Flex w="calc(100vw - 50px)" p={3}>
+        <Flex w="calc(100vw - 50px)" p={3} pl={0}>
           <Component flex={1} {...pageProps} />
         </Flex>
 
