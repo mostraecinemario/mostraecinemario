@@ -18,7 +18,7 @@ const listContent = [
   },
   {
     title: 'Assistente de Produção:',
-    names: ['Gianluca Cozza']
+    names: ['Alessa Vaz']
   },
   {
     title: 'Identidade Visual:',
