@@ -1,9 +1,9 @@
-import { Heading, Text, Flex, Stack, Card, CardBody, Image } from '@chakra-ui/react';
+import { Heading, Text, Flex, Stack, Card, CardBody, Image, AspectRatio} from '@chakra-ui/react';
 import { filmes } from '../utils/filmes';
 
 const Filmes = () => {
   return (
-    <Stack justify={'center'} w={{base:'100%', md: '60%'}} spacing={10}>
+    <Stack justify={'center'} w={{base:'100%', md: '70%', lg: '50%', xl: '75%', '2xl': '60%'}} spacing={10}>
       {filmes.map(filme => (
           <Flex direction={'column'} mt={6} key={filme.title}>
           <Flex alignItems={'center'} >
@@ -16,12 +16,14 @@ const Filmes = () => {
             : undefined
           }
           <Stack spacing={5}>
-            <Card direction={{base: 'column', md: 'row'}} mt={7} overflow='hidden' variant='outline'>
+            <Card direction={{base: 'column', xl: 'row'}} mt={7} overflow='hidden' variant='outline' h={{base: "auto", xl: '315px'}}>
               <Image
                 objectFit='cover'
-                maxW={{md:'230px'}}
                 src={filme.curta.image}
                 alt={`longa - ${filme.curta.name}`}
+                style={{
+                  aspectRatio: 1 / 1
+                }}
               />
               <Stack>
                 <CardBody>
@@ -34,7 +36,7 @@ const Filmes = () => {
                 </CardBody>
               </Stack>
             </Card>
-            <Card direction={{base: 'column', md: 'row'}} mt={7} overflow='hidden' variant='outline'>
+            <Card direction={{base: 'column', xl: 'row'}} mt={7} overflow='hidden' variant='outline' h={{base: "auto", xl: '315px'}}>
               <Stack>
                 <CardBody>
                   <Text fontSize='md' className='justify'>{filme.longa.min}</Text>
@@ -47,9 +49,11 @@ const Filmes = () => {
               </Stack>
               <Image
                 objectFit='cover'
-                maxW={{md:'230px'}}
                 src={filme.longa.image}
                 alt={`longa - ${filme.longa.name}`}
+                style={{
+                  aspectRatio: 1 / 1
+                }}
               />
             </Card>
           </Stack>
