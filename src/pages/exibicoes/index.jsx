@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Stack, AspectRatio, Text } from "@chakra-ui/react";
+import Filmes from '../../components/Filmes';
 
 const CinemaItinerante = () => {
   return (
@@ -14,6 +15,10 @@ const CinemaItinerante = () => {
         <AspectRatio w="80%" ratio={{base: 1 / 2, md: 16 / 9}}>
           <iframe src="https://www.google.com/maps/d/embed?mid=1MNCoheTDHkGObLQOq5cOFqn7qv9ePE0&ehbc=2E312F"></iframe>
         </AspectRatio>
+      </Stack>
+
+      <Stack align={'center'}>
+        <Filmes />
       </Stack>
 
     </Stack>
