@@ -42,7 +42,7 @@ const listContent = [
   },
   {
     title: 'Colaboradores:',
-    names: ['Adryan Copello', 'Jean Amaral', 'Valentina Acosta', 'Angelita Fialho', 'Miguel Albuquerque', 'Aline Dias']
+    names: ['Adryan Copello', 'Jean Amaral', 'Valentina Acosta', 'Angelita Fialho', 'Miguel Albuquerque', 'Aline Dias', 'Matheus Perazo', 'Julia Arocha', 'Cláudia Feltrin', 'Bianca De-Zotti']
   },
 ] 
 

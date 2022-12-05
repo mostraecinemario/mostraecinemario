@@ -10,6 +10,7 @@ const Navigation = {
     label: "Edição 2022",
     children: [
       {label: "4ªMCLARG", href: '/4mclarg'},
+      {label: "Filmes", href: '/filmes'},
     ]
   },
   filmes: {
