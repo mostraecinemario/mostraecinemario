@@ -1,6 +1,6 @@
 export const oficinas = [
   {
-    firstTitle: ["06/12 - das 9h às 12h - 25 vagas"],
+    firstTitle: ["06/12 - das 14h às 17h - 25 vagas"],
     title: "INTRODUÇÃO A PRODUÇÃO AUDIOVISUAL",
     description: "A oficina tem como objetivo discutir as etapas de realização audiovisual  e o papel do produtor em cada uma delas. Também, trazer um panorama sobre as funções e responsabilidades nos sets de filmagem.",
     warning: "TODAS OFICINAS IRÃO ACONTECER NO IFRS-CAMPUS RIO GRANDE NO PRÉDIO 8, SEDE DO NÚCLEO DE PRODUÇÃO AUDIOVISUAL OFCINE",
